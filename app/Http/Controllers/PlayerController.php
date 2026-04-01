@@ -104,4 +104,16 @@ class PlayerController extends Controller
         $player->delete();
         return redirect()->route('players.index')->with('success', 'Player removed.');
     }
+
+    public function toggleAvailability(Player $player)
+{
+    $user = Auth::user();
+    if ($user->role !== 'admin' && $user->managedTeam->id !== $player->team_id) {
+        abort(403);
+    }
+
+    $player->update(['is_available' => !$player->is_available]);
+
+    return redirect()->back()->with('success', 'Availability updated.');
+}
 }
