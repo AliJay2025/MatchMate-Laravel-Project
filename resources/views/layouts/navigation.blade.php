@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+		<x-nav-link :href="route('league')" :active="request()->routeIs('league')">
+    			{{ __('League Table') }}
+			</x-nav-link>
                      @auth
                     @if(auth()->user()->role === 'manager' || auth()->user()->role === 'admin')
                         <x-nav-link :href="route('players.index')" :active="request()->routeIs('players.*')">
