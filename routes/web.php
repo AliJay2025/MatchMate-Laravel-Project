@@ -18,8 +18,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/league', [App\Http\Controllers\LeagueTableController::class, 'index'])->name('league');
-
+    
     Route::resource('players', PlayerController::class);
+    Route::resource('teams', App\Http\Controllers\TeamController::class);
     Route::patch('/players/{player}/availability', [PlayerController::class, 'toggleAvailability'])->name('players.availability');
 });
 
@@ -28,3 +29,6 @@ Route::middleware(['auth', 'role:manager'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('/my-profile', function () {
+    return view('my-profile');
+})->middleware('auth')->name('my.profile');
