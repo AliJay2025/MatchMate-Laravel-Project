@@ -9,12 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('role:admin')->except(['index', 'show']);
-    }
-
     public function index()
     {
         $teams = Team::with('manager')->orderBy('points', 'desc')->get();
@@ -23,12 +17,19 @@ class TeamController extends Controller
 
     public function create()
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Only administrators can create teams.');
+        }
         $managers = User::where('role', 'manager')->get();
         return view('teams.create', compact('managers'));
     }
 
     public function store(Request $request)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Only administrators can create teams.');
+        }
+        
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:teams',
             'short_name' => 'nullable|string|max:10',
@@ -48,12 +49,19 @@ class TeamController extends Controller
 
     public function edit(Team $team)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Only administrators can edit teams.');
+        }
         $managers = User::where('role', 'manager')->get();
         return view('teams.edit', compact('team', 'managers'));
     }
 
     public function update(Request $request, Team $team)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Only administrators can update teams.');
+        }
+        
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:teams,name,' . $team->id,
             'short_name' => 'nullable|string|max:10',
@@ -67,6 +75,10 @@ class TeamController extends Controller
 
     public function destroy(Team $team)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Only administrators can delete teams.');
+        }
+        
         $team->delete();
         return redirect()->route('teams.index')->with('success', 'Team deleted successfully!');
     }
