@@ -10,21 +10,30 @@ use Illuminate\Support\Facades\Auth;
 class PlayerController extends Controller
 {
     
-    public function index()
-    {
-        $user = Auth::user();
-        if ($user->role === 'admin') {
-            $players = Player::with('team')->get();
-        } else {
-            $team = $user->managedTeam;
-            if (!$team) {
-                abort(403, 'You are not assigned to any team.');
-            }
-            $players = $team->players;
+   public function index()
+{
+    $user = Auth::user();
+    $search = request('search');
+    
+    if ($user->role === 'admin') {
+        $players = Player::with('team')
+            ->when($search, function($query, $search) {
+                return $query->where('name', 'like', "%{$search}%");
+            })
+            ->paginate(10);
+    } else {
+        $team = $user->managedTeam;
+        if (!$team) {
+            abort(403, 'You are not assigned to any team.');
         }
-        return view('players.index', compact('players'));
+        $players = $team->players()
+            ->when($search, function($query, $search) {
+                return $query->where('name', 'like', "%{$search}%");
+            })
+            ->paginate(10);
     }
-
+    return view('players.index', compact('players'));
+}
     public function create()
     {
         $user = Auth::user();

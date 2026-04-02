@@ -29,6 +29,3 @@ Route::middleware(['auth', 'role:manager'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
-Route::get('/my-profile', function () {
-    return view('my-profile');
-})->middleware('auth')->name('my.profile');

@@ -11,30 +11,24 @@ class TeamController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth');
+        $this->middleware('role:admin')->except(['index', 'show']);
     }
 
     public function index()
     {
-        $teams = Team::with('manager')->get();
+        $teams = Team::with('manager')->orderBy('points', 'desc')->get();
         return view('teams.index', compact('teams'));
     }
 
     public function create()
     {
-        if (!Auth::user()->isAdmin()) {
-            abort(403, 'Only administrators can create teams.');
-        }
         $managers = User::where('role', 'manager')->get();
         return view('teams.create', compact('managers'));
     }
 
     public function store(Request $request)
     {
-        if (!Auth::user()->isAdmin()) {
-            abort(403);
-        }
-
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:teams',
             'short_name' => 'nullable|string|max:10',
@@ -48,25 +42,18 @@ class TeamController extends Controller
 
     public function show(Team $team)
     {
-        $team->load('players');
+        $team->load('players', 'manager');
         return view('teams.show', compact('team'));
     }
 
     public function edit(Team $team)
     {
-        if (!Auth::user()->isAdmin()) {
-            abort(403);
-        }
         $managers = User::where('role', 'manager')->get();
         return view('teams.edit', compact('team', 'managers'));
     }
 
     public function update(Request $request, Team $team)
     {
-        if (!Auth::user()->isAdmin()) {
-            abort(403);
-        }
-
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:teams,name,' . $team->id,
             'short_name' => 'nullable|string|max:10',
@@ -80,9 +67,6 @@ class TeamController extends Controller
 
     public function destroy(Team $team)
     {
-        if (!Auth::user()->isAdmin()) {
-            abort(403);
-        }
         $team->delete();
         return redirect()->route('teams.index')->with('success', 'Team deleted successfully!');
     }

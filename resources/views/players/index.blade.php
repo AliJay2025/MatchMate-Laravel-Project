@@ -21,6 +21,17 @@
         </div>
     @endif
 
+    <!-- Search Form -->
+    <div class="mb-6">
+        <form method="GET" action="{{ route('players.index') }}" class="flex gap-2">
+            <input type="text" name="search" placeholder="Search players by name..." value="{{ request('search') }}" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition">Search</button>
+            @if(request('search'))
+                <a href="{{ route('players.index') }}" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition">Clear</a>
+            @endif
+        </form>
+    </div>
+
     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
         <div class="overflow-x-auto">
             <table class="min-w-full divide-y divide-gray-200">
@@ -93,6 +104,10 @@
                     @endforelse
                 </tbody>
             </table>
+        </div>
+        <!-- Pagination Links -->
+        <div class="px-6 py-4 border-t border-gray-200">
+            {{ $players->links() }}
         </div>
     </div>
 </div>
