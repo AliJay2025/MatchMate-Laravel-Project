@@ -13,7 +13,11 @@
 
 # MatchMate Laravel Project
 
-## 🎬 Application Demo
+A football league management system built with Laravel.
+
+---
+
+## 🎬 Demo
 
 <div align="center">
   <img src="matchmate-demo.gif" alt="MatchMate Demo" width="800">
@@ -21,10 +25,28 @@
   <em>MatchMate - Football League Management in Action</em>
 </div>
 
+---
+
 ## 🎯 Project Overview
 
 MatchMate is a Laravel-based football league management system designed to simplify the organization and tracking of local football competitions.
-It allows administrators and managers to manage teams, players, fixtures, and match results, while fans can view league tables and results.
+
+It allows administrators and managers to:
+- Manage teams and players  
+- Record match results  
+- View league tables  
+
+Fans can also view fixtures and standings.
+
+---
+
+## ✨ Features
+
+- User authentication (login/register)
+- Manage teams and players
+- View league tables
+- Track match results
+- Profile management
 
 ---
 
@@ -34,20 +56,18 @@ Follow these steps to set up and run the project locally.
 
 ### 1. Clone the Repository
 
-```bash id="zptqnx"
+```bash
 git clone https://github.com/AliJay2025/matchmate-laravel.git
 cd matchmate-laravel
 ```
 
 ### 2. Install PHP Dependencies
-
-```bash id="suvd4u"
+```bash
 composer install
 ```
 
 ### 3. Set Up Environment File
-
-```bash id="zrqksy"
+```bash
 cp .env.example .env
 php artisan key:generate
 ```
@@ -56,7 +76,7 @@ php artisan key:generate
 
 Edit `.env`:
 
-```env id="8x6onq"
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -66,86 +86,88 @@ DB_PASSWORD=
 ```
 
 ### 5. Create Database
-
-```bash id="3vhpu3"
+```bash
 mysql -u root -p -e "CREATE DATABASE matchmate;"
 ```
 
 ### 6. Run Migrations
-
-```bash id="73fujc"
+```bash
 php artisan migrate
 ```
 
 ### 7. Install Frontend Dependencies
-
-```bash id="53d4ej"
+```bash
 npm install
 npm run build
 ```
 
 ### 8. Start the Server
-
-```bash id="fxnnq4"
+```bash
 php artisan serve
 ```
 
 ### 9. Open the Application
+```bash
+http://localhost:8000
 ```
-Visit: http://localhost:8000
 
+---
+
+## 📁 Project Structure
 ```
-
-### 10. Full Project Structure
-
-MatchMate-CA2-Server/
+matchmate-laravel/
 │
 ├── app/
 │   ├── Http/
 │   │   └── Controllers/
-│   │       ├── PlayerController.php      ← HERE!
-│   │       ├── TeamController.php
-│   │       ├── ProfileController.php
-│   │       ├── LeagueTableController.php
-│   │       └── Auth/
-│   │           └── (authentication controllers)
-│   │
+│   │       ├── PlayerController.php
+│       ├── TeamController.php
+│       ├── ProfileController.php
+│       ├── LeagueTableController.php
+│       └── Auth/
+│           └── (authentication controllers)
+│
 │   └── Models/
-│       ├── Player.php                    ← Model
-│       ├── Team.php                      ← Model
-│       └── User.php                      ← Model
+│       ├── Player.php
+│       ├── Team.php
+│       └── User.php
 │
 ├── resources/
 │   └── views/
 │       ├── players/
-│       │   ├── index.blade.php           ← View (list players)
-│       │   ├── create.blade.php          ← View (add player)
-│       │   ├── edit.blade.php            ← View (edit player)
-│       │   └── show.blade.php            ← View (view one player)
+│       │   ├── index.blade.php
+│       │   ├── create.blade.php
+│       │   ├── edit.blade.php
+│       │   └── show.blade.php
 │       ├── teams/
 │       ├── league/
 │       ├── profile/
 │       └── layouts/
 │
 ├── routes/
-│   └── web.php                           ← Routes (URLs)
+│   └── web.php
 │
 ├── database/
-│   └── migrations/                       ← Database tables
+│   └── migrations/
 │
-└── public/
-    ├── css/
-    │   └── homepage.css
-    └── js/
-        └── validation.js
+├── public/
+│   ├── css/
+│   │   └── homepage.css
+│   └── js/
+│       └── validation.js
+│
+├── config/
+├── storage/
+├── tests/
+├── vendor/
+```
 
 ---
-
 
 ## 👥 Project Team
 
 | Name             | Role      |
-| ---------------- | --------- |
+|------------------|----------|
 | Ali Jabriil      | Developer |
 | Abdihafid Gahayr | Developer |
 | Abdirahman Farah | Developer |
