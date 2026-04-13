@@ -13,6 +13,14 @@
 
 # MatchMate Laravel Project
 
+## 🎬 Application Demo
+
+<div align="center">
+  <img src="matchmate-demo.gif" alt="MatchMate Demo" width="800">
+  <br>
+  <em>MatchMate - Football League Management in Action</em>
+</div>
+
 ## 🎯 Project Overview
 
 MatchMate is a Laravel-based football league management system designed to simplify the organization and tracking of local football competitions.
@@ -49,9 +57,12 @@ php artisan key:generate
 Edit `.env`:
 
 ```env id="8x6onq"
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
 DB_DATABASE=matchmate
 DB_USERNAME=root
-DB_PASSWORD=your_password
+DB_PASSWORD=
 ```
 
 ### 5. Create Database
@@ -80,10 +91,56 @@ php artisan serve
 ```
 
 ### 9. Open the Application
-
+```
 Visit: http://localhost:8000
 
+```
+
+### 10. Full Project Structure
+
+MatchMate-CA2-Server/
+│
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       ├── PlayerController.php      ← HERE!
+│   │       ├── TeamController.php
+│   │       ├── ProfileController.php
+│   │       ├── LeagueTableController.php
+│   │       └── Auth/
+│   │           └── (authentication controllers)
+│   │
+│   └── Models/
+│       ├── Player.php                    ← Model
+│       ├── Team.php                      ← Model
+│       └── User.php                      ← Model
+│
+├── resources/
+│   └── views/
+│       ├── players/
+│       │   ├── index.blade.php           ← View (list players)
+│       │   ├── create.blade.php          ← View (add player)
+│       │   ├── edit.blade.php            ← View (edit player)
+│       │   └── show.blade.php            ← View (view one player)
+│       ├── teams/
+│       ├── league/
+│       ├── profile/
+│       └── layouts/
+│
+├── routes/
+│   └── web.php                           ← Routes (URLs)
+│
+├── database/
+│   └── migrations/                       ← Database tables
+│
+└── public/
+    ├── css/
+    │   └── homepage.css
+    └── js/
+        └── validation.js
+
 ---
+
 
 ## 👥 Project Team
 
