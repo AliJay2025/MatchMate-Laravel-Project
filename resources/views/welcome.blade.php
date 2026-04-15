@@ -25,7 +25,6 @@
             <a href="#home">Home</a>
             <a href="#features">Features</a>
             <a href="#league">League Table</a>
-            <a href="#about">About</a>
             @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/dashboard') }}" class="btn-nav">Dashboard</a>
