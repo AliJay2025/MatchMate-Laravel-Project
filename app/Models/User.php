@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->role === 'fan';
     }
+    
+   public function managedTeam()
+{
+    return $this->hasOne(Team::class, 'manager_id');
+}
 }

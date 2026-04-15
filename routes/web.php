@@ -3,12 +3,24 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\ManagerDashboardController;
+use App\Http\Controllers\SimpleRegisterController;
 use Illuminate\Support\Facades\Route;
 
+// Simple registration routes (BEFORE auth)
+Route::get('/register', [SimpleRegisterController::class, 'showForm']);
+Route::post('/register', [SimpleRegisterController::class, 'register']);
+
+// Public routes
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+// Auth routes (includes /login and /register)
+require __DIR__.'/auth.php';
+
+// Protected routes (require authentication)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -27,5 +39,3 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'role:manager'])->group(function () {
     Route::get('/manager/dashboard', [ManagerDashboardController::class, 'index'])->name('manager.dashboard');
 });
-
-require __DIR__.'/auth.php';

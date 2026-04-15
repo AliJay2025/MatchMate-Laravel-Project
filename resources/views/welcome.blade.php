@@ -30,7 +30,7 @@
                     <a href="{{ url('/dashboard') }}" class="btn-nav">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="btn-nav">Login</a>
-                    <a href="{{ route('register') }}" class="btn-nav">Register</a>
+                    <a href="{{ url('/register') }}" class="btn-nav">Register</a>
                 @endauth
             @endif
         </div>
@@ -47,7 +47,7 @@
                         @auth
                             <a href="{{ url('/dashboard') }}" class="btn-primary">Go to Dashboard</a>
                         @else
-                            <a href="{{ route('register') }}" class="btn-primary">Register Your Team</a>
+                            <a href="{{ url('/register') }}" class="btn-primary">Register Your Team</a>
                             <a href="{{ route('login') }}" class="btn-secondary">Sign In</a>
                         @endauth
                     @endif
@@ -182,7 +182,7 @@
             @auth
                 <a href="{{ url('/players') }}" class="btn-primary">View Full Fixtures</a>
             @else
-                <a href="{{ route('register') }}" class="btn-primary">View Full Fixtures & Results</a>
+                <a href="{{ url('/register') }}" class="btn-primary">View Full Fixtures & Results</a>
             @endauth
         </div>
     </section>
@@ -217,7 +217,7 @@
             @auth
                 <a href="{{ url('/dashboard') }}" class="btn-primary">Go to Dashboard</a>
             @else
-                <a href="{{ route('register') }}" class="btn-primary">Register Now - It's Free!</a>
+                <a href="{{ url('/register') }}" class="btn-primary">Register Now - It's Free!</a>
             @endauth
         @endif
     </section>

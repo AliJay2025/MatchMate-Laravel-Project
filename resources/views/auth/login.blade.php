@@ -99,9 +99,9 @@
                     <div class="text-center mt-6">
                         <p class="text-gray-600">
                             Don't have an account?
-                            <a href="{{ route('register') }}" class="text-green-600 hover:text-green-700 font-semibold hover:underline">
-                                Register here
-                            </a>
+                            <a href="{{ url('/register') }}" class="text-green-600 hover:text-green-700 font-semibold hover:underline">
+    					Register here
+				</a>
                         </p>
                     </div>
                 </form>
