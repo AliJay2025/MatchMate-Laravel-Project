@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/fixtures', [App\Http\Controllers\FixtureController::class, 'index'])->name('fixtures');
 
 // Auth routes (includes /login and /register)
 require __DIR__.'/auth.php';
@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/league', [App\Http\Controllers\LeagueTableController::class, 'index'])->name('league');
+
+    Route::get('/fixtures', [App\Http\Controllers\FixtureController::class, 'index'])->name('fixtures');
     
     Route::resource('players', PlayerController::class);
     Route::resource('teams', App\Http\Controllers\TeamController::class);

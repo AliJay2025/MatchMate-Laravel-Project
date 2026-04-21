@@ -14,6 +14,21 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+    
+    <style>
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -63,27 +78,30 @@
     <section class="features" id="features">
         <h2 class="section-title">Everything You Need to Run Your League</h2>
         <div class="features-grid">
-            <div class="feature-card">
+            <a href="{{ url('/fixtures') }}" class="feature-card" style="text-decoration: none; display: block;">
                 <div class="feature-icon">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
                 <h3>Fixtures & Results</h3>
                 <p>Generate full season fixtures automatically. Record scores and track results instantly.</p>
-            </div>
-            <div class="feature-card">
+            </a>
+            
+            <a href="{{ route('league') }}" class="feature-card" style="text-decoration: none; display: block;">
                 <div class="feature-icon">
                     <i class="fas fa-trophy"></i>
                 </div>
                 <h3>Live League Tables</h3>
                 <p>Updated automatically as results come in. See who's top of the table in real-time.</p>
-            </div>
-            <div class="feature-card">
+            </a>
+            
+            <a href="{{ route('players.index') }}" class="feature-card" style="text-decoration: none; display: block;">
                 <div class="feature-icon">
                     <i class="fas fa-users"></i>
                 </div>
                 <h3>Squad Management</h3>
                 <p>Team managers can register players, set availability, and manage their squad easily.</p>
-            </div>
+            </a>
+            
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-mobile-alt"></i>
@@ -187,7 +205,7 @@
         </div>
     </section>
 
-    <!-- How It Works -->
+    <!-- Stats Section -->
     <section class="stats">
         <div class="stats-grid">
             <div class="stat-item">
