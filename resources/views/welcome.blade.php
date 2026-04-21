@@ -260,11 +260,11 @@
                 <p><a href="#" style="color: #aaa; text-decoration: none;">All Fixtures</a></p>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p><i class="fas fa-envelope"></i> info@matchmate.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Local Football Ground</p>
-                <p><i class="fas fa-clock"></i> Support: Mon-Fri, 9am-5pm</p>
-            </div>
+    		<h4>Contact Info</h4>
+    		<p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ali-jabriil-4b0232405" target="_blank" style="color: #aaa; text-				decoration: none;">Ali Jabriil</a></p>
+    		<p><i class="fas fa-envelope"></i> <a href="mailto:D00283862@student.dkit.ie" style="color: #aaa; text-decoration: none;">D00283862				@student.dkit.ie</a></p>
+   		<p><i class="fas fa-clock"></i> Support: Mon-Fri, 9am-5pm</p>
+	    </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 MatchMate. Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> for local football communities</p>
