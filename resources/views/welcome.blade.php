@@ -75,42 +75,42 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features" id="features">
-        <h2 class="section-title">Everything You Need to Run Your League</h2>
-        <div class="features-grid">
-            <a href="{{ url('/fixtures') }}" class="feature-card" style="text-decoration: none; display: block;">
-                <div class="feature-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h3>Fixtures & Results</h3>
-                <p>Generate full season fixtures automatically. Record scores and track results instantly.</p>
-            </a>
-            
-            <a href="{{ route('league') }}" class="feature-card" style="text-decoration: none; display: block;">
-                <div class="feature-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <h3>Live League Tables</h3>
-                <p>Updated automatically as results come in. See who's top of the table in real-time.</p>
-            </a>
-            
-            <a href="{{ route('players.index') }}" class="feature-card" style="text-decoration: none; display: block;">
-                <div class="feature-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>Squad Management</h3>
-                <p>Team managers can register players, set availability, and manage their squad easily.</p>
-            </a>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>Mobile Friendly</h3>
-                <p>Works on your phone. Check fixtures, results, and tables from anywhere.</p>
+<section class="features" id="features">
+    <h2 class="section-title">Everything You Need to Run Your League</h2>
+    <div class="features-grid">
+        <a href="{{ url('/fixtures') }}" class="feature-card" style="text-decoration: none; display: block;">
+            <div class="feature-icon">
+                <i class="fas fa-calendar-alt"></i>
             </div>
+            <h3>Fixtures & Results</h3>
+            <p>Generate full season fixtures automatically. Record scores and track results instantly.</p>
+        </a>
+        
+        <a href="{{ route('league') }}" class="feature-card" style="text-decoration: none; display: block;">
+            <div class="feature-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h3>Live League Tables</h3>
+            <p>Updated automatically as results come in. See who's top of the table in real-time.</p>
+        </a>
+        
+        <a href="{{ route('players.index') }}" class="feature-card" style="text-decoration: none; display: block;">
+            <div class="feature-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3>Squad Management</h3>
+            <p>Team managers can register players, set availability, and manage their squad easily.</p>
+        </a>
+        
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Friendly</h3>
+            <p>Works on your phone. Check fixtures, results, and tables from anywhere.</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- League Table Preview -->
     <section class="league-preview" id="league">
