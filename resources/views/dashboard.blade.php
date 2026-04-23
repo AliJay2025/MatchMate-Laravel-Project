@@ -9,6 +9,7 @@
 <body class="bg-gray-100">
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
             <!-- Welcome Card -->
             <div class="bg-gradient-to-r from-green-600 to-green-700 rounded-xl shadow-lg overflow-hidden mb-8">
                 <div class="px-6 py-8 text-white">
@@ -57,6 +58,12 @@
                     <div class="text-gray-500 text-sm mt-1">Add, edit, or remove players</div>
                 </a>
                 @endif
+                
+                <a href="{{ route('fixtures') }}" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition text-center">
+                    <div class="text-4xl mb-3">📅</div>
+                    <div class="font-bold text-lg">Fixtures & Results</div>
+                    <div class="text-gray-500 text-sm mt-1">View upcoming matches and results</div>
+                </a>
                 
                 <a href="{{ route('profile.edit') }}" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition text-center">
                     <div class="text-4xl mb-3">👤</div>
