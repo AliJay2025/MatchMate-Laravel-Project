@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 // Simple registration routes (BEFORE auth)
 Route::get('/register', [SimpleRegisterController::class, 'showForm']);
 Route::post('/register', [SimpleRegisterController::class, 'register']);
+Route::get('/fixtures', [App\Http\Controllers\FixtureController::class, 'index'])->name('fixtures');
 
 // Public routes
 Route::get('/', function () {
@@ -32,6 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/league', [App\Http\Controllers\LeagueTableController::class, 'index'])->name('league');
 
     Route::get('/fixtures', [App\Http\Controllers\FixtureController::class, 'index'])->name('fixtures');
+    
+    // Fixtures routes (resource already includes index, create, store, edit, update, destroy)
+    Route::resource('fixtures', App\Http\Controllers\FixtureController::class);
     
     Route::resource('players', PlayerController::class);
     Route::resource('teams', App\Http\Controllers\TeamController::class);

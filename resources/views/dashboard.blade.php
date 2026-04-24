@@ -70,6 +70,11 @@
                     <div class="font-bold text-lg">My Profile</div>
                     <div class="text-gray-500 text-sm mt-1">Update your account settings</div>
                 </a>
+		<a href="{{ route('fixtures.index') }}" class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition text-center">
+    <div class="text-4xl mb-3">📅</div>
+    <div class="font-bold text-lg">Fixtures & Results</div>
+    <div class="text-gray-500 text-sm mt-1">View upcoming matches and results</div>
+</a>
             </div>
         </div>
     </div>
