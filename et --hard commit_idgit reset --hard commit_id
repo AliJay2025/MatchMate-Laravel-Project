@@ -1,0 +1,232 @@
+[33mcommit 9b7fc6650d4b4dd34ad902f611cb4a38bb3211ae[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mlaravel-10-test[m[33m)[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 23 21:07:16 2026 +0100
+
+    Remove deploy.sh file causing deployment errors
+
+[33mcommit 0a4f61d12216422a137a59f6534f9802727293b1[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 23 16:30:32 2026 +0100
+
+    Added Fixtures & Results card to dashboard quick links
+
+[33mcommit 86ede6a4aa0876ea1a88eb287a04551e8fd3b042[m
+Merge: 0a48a2d 185fe4a
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 22:03:49 2026 +0100
+
+    Complete merge
+
+[33mcommit 0a48a2d9b297c51eae3551803f61a87dbe09a766[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 21:57:37 2026 +0100
+
+    Trigger deployment
+
+[33mcommit 185fe4acfa3ff42faf20d147209c3bf573c2c0aa[m
+Author: AliJay2025 <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 21:48:04 2026 +0100
+
+    Add or update the Azure App Service build and deployment workflow config
+
+[33mcommit c25b2c1d18e659d256393421d9977eb81a5b6e7d[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 14:43:45 2026 +0100
+
+    Update GitHub Actions to use PHP 8.4
+
+[33mcommit 40d9c16210a362355acddde44f6479ee85ccc90b[m
+Merge: 7940324 5e4a7e2
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 14:32:01 2026 +0100
+
+    Merge branch 'main' of https://github.com/AliJay2025/MatchMate-Laravel-Project
+
+[33mcommit 7940324bcf44abbefcb3a0c7a326d868c8e1c205[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 14:29:50 2026 +0100
+
+    Trigger redeployment with PHP 8.4
+
+[33mcommit 5e4a7e284888b9d8454b6097c6aa56915c9c87b2[m
+Author: AliJay2025 <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 14:10:56 2026 +0100
+
+    Add or update the Azure App Service build and deployment workflow config
+
+[33mcommit 42858e2ebdcba0097a026c3c6b3d39ba9a47b711[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 22 10:16:18 2026 +0100
+
+    Add Matchmate logo with football icon in browser tab
+
+[33mcommit ef30acded49120ef3eab028eeffa8e6ee327853a[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Tue Apr 21 17:14:08 2026 +0100
+
+    Update footer: Add personal contact information including LinkedIn, and email address
+
+[33mcommit aaea61f1dbfe88a79e7f6707f90e4025c856ccf2[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Tue Apr 21 16:52:28 2026 +0100
+
+    Update homepage features layout: change from 4 columns to 2x2 grid, add fixtures navigation link, style fixtures page with 6 upcoming matches
+
+[33mcommit 0903d20f4dc1a29e7ac54924ec8352a65e524315[m
+Merge: e54e4ff 35b2a33
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Tue Apr 21 16:32:49 2026 +0100
+
+    Merge remote changes with local updates
+
+[33mcommit e54e4ff5eebd4ea1f3894ecbdcb0ca43c5594cb8[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Tue Apr 21 16:29:36 2026 +0100
+
+    Updated MatchMate application: Add fixtures feature with styled page, 6 upcoming matches, navigation menu update, and clickable homepage feature cards
+
+[33mcommit 35b2a337c464643b7aa5d204da863245f266dab0[m
+Merge: b43f97c b1241cb
+Author: dhomoio <dhomdhme1@gmail.com>
+Date:   Tue Apr 21 13:23:34 2026 +0100
+
+    Merge branch 'abdi-branch'
+
+[33mcommit b43f97c1829e962c9d5c03e41565f2ab3914e1da[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 15 18:56:15 2026 +0100
+
+    Added working registration page with logo and styling,fix routes, add SimpleRegisterController
+
+[33mcommit fe4d6f544d26d12beeae2f245cab715f465ae6a2[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 15 14:58:26 2026 +0100
+
+    Replaced Laravel logo with custom MatchMate logo
+
+[33mcommit a1c3c054bd23456cfe6c48cf5854662166a2a771[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 15 14:30:45 2026 +0100
+
+    Remove About link from homepage navigation
+
+[33mcommit 38007ff00065227f47a058447d322bbe678ddd21[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Mon Apr 13 18:40:35 2026 +0100
+
+    Fixed README with Screen demo and Project Structure
+
+[33mcommit a28c0411e42ff5eadf3c15bb1d40c46e9c20d551[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Mon Apr 13 18:15:50 2026 +0100
+
+    Updated README with Screen demo
+
+[33mcommit 6d85e50a0f97aa76a6da7bd67a2bc1c2c0a7c915[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Mon Apr 13 17:55:26 2026 +0100
+
+    Added optimized matchmate-demo Screen GIF
+
+[33mcommit 028fc755fc1207b38c8b8dd2b4411a0a34679c3a[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Mon Apr 13 17:00:26 2026 +0100
+
+    Add demo GIF to README
+
+[33mcommit b1241cb92fd4bdede869dbafb6381320c5c1d81b[m
+Author: dhomoio <dhomdhme1@gmail.com>
+Date:   Mon Apr 13 16:33:39 2026 +0100
+
+    done!
+
+[33mcommit d04a8e13ce6cf011c0799d76637c4787b2e0be23[m
+Author: dhomoio <dhomdhme1@gmail.com>
+Date:   Mon Apr 13 16:28:16 2026 +0100
+
+    done
+
+[33mcommit 62292ebcdd5d3c1ce0d9fdb4d4561a857b69ba8f[m
+Author: dhomoio <dhomdhme1@gmail.com>
+Date:   Mon Apr 13 16:21:44 2026 +0100
+
+    my work are done
+
+[33mcommit e3bb9a69d6be6a3520fdf2382751e5c25677a352[m
+Author: dhomoio <dhomdhme1@gmail.com>
+Date:   Mon Apr 13 15:51:43 2026 +0100
+
+    My work done
+
+[33mcommit 5f5f41db0e2ca3f3c8d7ab390ee8b4df113e6a75[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 22:03:24 2026 +0100
+
+    Fix TeamController: Remove middleware constructor for Laravel 13 compatibility
+
+[33mcommit 694020bcb936b377b7978b9d7f403095e60e5f2a[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 21:50:14 2026 +0100
+
+    Add working profile page for all roles (Admin/Manager/Fan), update navigation, fix routes, add beautiful UI styling, complete players and teams CRUD, add league table with 5 teams
+
+[33mcommit 105ff3ca80a4178c4bb79d0aa1cb96c397342c00[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 20:48:16 2026 +0100
+
+    Add working profile page with update and password change functionality
+
+[33mcommit b79af6e36dfe9e6767897ce477b391c2066b15c3[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 13:46:51 2026 +0100
+
+    Style dashboard: Add beautiful footbal dashboard with welcome card, stats boxes, and quick action cards
+
+[33mcommit 78e194c7015b1d9e1dde8368ceffb89c69df8cc2[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 13:12:48 2026 +0100
+
+    Update teams data: Add 5 teams with stats, added Bayern FC Team, update homepage league preview
+
+[33mcommit 62645dee1fcbcbdc885bb849134a0af9b7112248[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 13:00:51 2026 +0100
+
+    add client-side validation, create responsive player cards and tables
+
+[33mcommit b15d13833dedfe3d93fc4f86649383571abcbb98[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Thu Apr 2 12:59:04 2026 +0100
+
+    Add CRUD operations for players, style all player pages with CSS style
+
+[33mcommit 9bbc4fc5c37cb9df9294c986d35842aface3cfe5[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 1 22:34:42 2026 +0100
+
+    Add league table feature: Create LeagueTableController, league view with standings, add team stats migration, update navigation with League Table link
+
+[33mcommit cac49177558bcbb924e206b2fa94a271f2a7acbb[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 1 21:12:33 2026 +0100
+
+    Added football homepage with separate CSS and JS files
+
+[33mcommit 063327b15792a0af0fe462a96c28a7be82744c74[m
+Merge: b5f1f7c b084c62
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 1 20:24:38 2026 +0100
+
+    Merge remote changes
+
+[33mcommit b5f1f7ccad48e98b27d09ecb8005b61f882d5fc9[m
+Author: Ali jabriil <D00283862@student.dkit.ie>
+Date:   Wed Apr 1 20:21:16 2026 +0100
+
+    Fix registration redirect and add missing controllers (PlayerController, ManagerDashboardController)
+
+[33mcommit b084c62aae4bb833b9495dead35e6882c6f0d0f9[m
+Author: abdihafidgahayr2-glitch <abdihafidgahayr2@gmail.com>
+Date:   Wed Apr 1 17:46:18 2026 +0100
+
+     Add manager dashboard and Renamed
