@@ -104,12 +104,14 @@
         </a>
         
         <div class="feature-card">
-            <div class="feature-icon">
-                <i class="fas fa-mobile-alt"></i>
-            </div>
-            <h3>Mobile Friendly</h3>
-            <p>Works on your phone. Check fixtures, results, and tables from anywhere.</p>
-        </div>
+    <div class="feature-icon">
+        <i class="fas fa-mobile-alt"></i>
+    </div>
+    <h3>Mobile Friendly</h3>
+    <p>Works on your phone. Check fixtures, results, and tables from anywhere.</p>
+    <p class="text-xs text-green-600 mt-2">✓ Responsive Design</p>
+    <p class="text-xs text-green-600">✓ Touch Friendly</p>
+</div>
     </div>
 </section>
 

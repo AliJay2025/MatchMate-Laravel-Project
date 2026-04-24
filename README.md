@@ -165,8 +165,8 @@ matchmate-laravel/
 
 ## 👥 Project Team
 
-| Name             | Role      |
-|------------------|----------|
-| Ali Jabriil      | Developer |
-| Abdihafid Gahayr | Developer |
-| Abdirahman Farah | Developer |"# test" 
+| Name | Role | Contact |
+|------|------|---------|
+| Ali Jabriil | Developer | [LinkedIn](https://www.linkedin.com/in/ali-jabriil-4b0232405/) |
+| Abdihafid Gahayr | Developer | [LinkedIn](https://www.linkedin.com/in/abdihafid-gahayr/) |
+| Abdirahman Farah | Developer | [LinkedIn](https://www.linkedin.com/in/abdirahman-farah/) | 
