@@ -4,13 +4,17 @@
 <div class="container mx-auto px-4 py-8">
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-3xl font-bold text-gray-800">Teams</h1>
-        <a href="{{ route('teams.create') }}" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition">Add New Team</a>
+        @if(Auth::check() && Auth::user()->role === 'admin')
+        <a href="{{ route('teams.create') }}" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition">
+            + Add New Team
+        </a>
+        @endif
     </div>
 
     @if(session('success'))
-        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded">
-            {{ session('success') }}
-        </div>
+    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded">
+        {{ session('success') }}
+    </div>
     @endif
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -25,12 +29,14 @@
                 <p class="text-gray-600 mb-4"><strong>Manager:</strong> {{ $team->manager->name ?? 'Not assigned' }}</p>
                 <div class="flex gap-2">
                     <a href="{{ route('teams.show', $team) }}" class="flex-1 text-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">View</a>
+                    @if(Auth::check() && Auth::user()->role === 'admin')
                     <a href="{{ route('teams.edit', $team) }}" class="flex-1 text-center bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition">Edit</a>
                     <form action="{{ route('teams.destroy', $team) }}" method="POST" class="flex-1">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition" onclick="return confirm('Delete this team?')">Delete</button>
                     </form>
+                    @endif
                 </div>
             </div>
         </div>
