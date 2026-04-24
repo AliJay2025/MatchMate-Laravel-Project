@@ -8,6 +8,24 @@
         <p class="text-gray-600">Stay updated with all match schedules and scores</p>
     </div>
 
+	<div class="flex justify-center gap-4 mb-8">
+    @if(Auth::check() && Auth::user()->role === 'admin')
+    <a href="{{ route('fixtures.create') }}" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+        </svg>
+        Add New Fixture
+    </a>
+    
+    <a href="{{ route('fixtures.create') }}?type=result" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+        </svg>
+        Add Result
+    </a>
+    @endif
+</div>
+
     <!-- Upcoming Matches Section -->
     <div class="mb-12">
         <div class="flex items-center justify-between mb-4">
